@@ -129,6 +129,8 @@ class AcountTypesViewController: UIViewController {
         return stack
     }()
     
+    
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         self.view.backgroundColor = utilities.darkBlueColor
@@ -184,16 +186,32 @@ class AcountTypesViewController: UIViewController {
     
     @objc func logInHandler () {
         print("Log In")
+        let modalStyle = UIModalTransitionStyle.crossDissolve
+        let vc = ViewController()
+        vc.modalTransitionStyle = modalStyle
+        self.present(vc, animated: true, completion: nil)
     }
     
     @objc func studentHandler () {
         print("Student")
+        let modalStyle = UIModalTransitionStyle.crossDissolve
+        let vc = RegistrationStudentViewController()
+        vc.modalTransitionStyle = modalStyle
+        self.present(vc, animated: true, completion: nil)
     }
     @objc func professorHandler () {
         print("Professor")
+        let modalStyle = UIModalTransitionStyle.crossDissolve
+        let vc = RegistrationProfessorViewController()
+        vc.modalTransitionStyle = modalStyle
+        self.present(vc, animated: true, completion: nil)
     }
     @objc func universityHandler () {
         print("University")
+        let modalStyle = UIModalTransitionStyle.crossDissolve
+        let vc = RegistrationUniversityViewController()
+        vc.modalTransitionStyle = modalStyle
+        self.present(vc, animated: true, completion: nil)
     }
 
 }

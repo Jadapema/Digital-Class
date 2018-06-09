@@ -12,6 +12,7 @@
 		DE31A72820CA1C8700A83DA1 /* RegistrationStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A72720CA1C8700A83DA1 /* RegistrationStudentViewController.swift */; };
 		DE31A72A20CA1C9E00A83DA1 /* RegistrationProfessorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A72920CA1C9E00A83DA1 /* RegistrationProfessorViewController.swift */; };
 		DE31A72C20CA1CE900A83DA1 /* RegistrationUniversityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A72B20CA1CE900A83DA1 /* RegistrationUniversityViewController.swift */; };
+		DE31A72E20CB877F00A83DA1 /* publicidad.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DE31A72D20CB877F00A83DA1 /* publicidad.mp4 */; };
 		DEAF45E520C9BBAB004BFC5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF45E420C9BBAB004BFC5D /* AppDelegate.swift */; };
 		DEAF45E720C9BBAB004BFC5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF45E620C9BBAB004BFC5D /* ViewController.swift */; };
 		DEAF45ED20C9BBAB004BFC5D /* Digital_Class.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEAF45EB20C9BBAB004BFC5D /* Digital_Class.xcdatamodeld */; };
@@ -44,6 +45,7 @@
 		DE31A72720CA1C8700A83DA1 /* RegistrationStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationStudentViewController.swift; sourceTree = "<group>"; };
 		DE31A72920CA1C9E00A83DA1 /* RegistrationProfessorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationProfessorViewController.swift; sourceTree = "<group>"; };
 		DE31A72B20CA1CE900A83DA1 /* RegistrationUniversityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUniversityViewController.swift; sourceTree = "<group>"; };
+		DE31A72D20CB877F00A83DA1 /* publicidad.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = publicidad.mp4; sourceTree = "<group>"; };
 		DEAF45E120C9BBAB004BFC5D /* Digital Class.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Digital Class.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAF45E420C9BBAB004BFC5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEAF45E620C9BBAB004BFC5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		DEAF45D820C9BBAA004BFC5D = {
 			isa = PBXGroup;
 			children = (
+				DE31A72D20CB877F00A83DA1 /* publicidad.mp4 */,
 				DEAF45E320C9BBAB004BFC5D /* Digital Class */,
 				DEAF45FB20C9BBAC004BFC5D /* Digital ClassTests */,
 				DEAF460620C9BBAD004BFC5D /* Digital ClassUITests */,
@@ -244,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE31A72E20CB877F00A83DA1 /* publicidad.mp4 in Resources */,
 				DEAF45F220C9BBAC004BFC5D /* LaunchScreen.storyboard in Resources */,
 				DEAF45EF20C9BBAC004BFC5D /* Assets.xcassets in Resources */,
 			);

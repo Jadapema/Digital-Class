@@ -180,6 +180,10 @@ class ViewController: UIViewController {
     
     @objc func signInHandler () {
         print("Sign In")
+        let modalStyle = UIModalTransitionStyle.crossDissolve
+        let vc = AcountTypesViewController()
+        vc.modalTransitionStyle = modalStyle
+        self.present(vc, animated: true, completion: nil)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
