@@ -154,7 +154,7 @@ class RegistrationStudentViewController: UIViewController {
         textField.layer.cornerRadius = 30
         textField.clipsToBounds = true
         textField.keyboardAppearance = .dark
-        textField.keyboardType = .asciiCapable
+        textField.keyboardType = .emailAddress
         textField.returnKeyType = .done
         return textField
     }()

@@ -13,6 +13,13 @@
 		DE31A72A20CA1C9E00A83DA1 /* RegistrationProfessorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A72920CA1C9E00A83DA1 /* RegistrationProfessorViewController.swift */; };
 		DE31A72C20CA1CE900A83DA1 /* RegistrationUniversityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A72B20CA1CE900A83DA1 /* RegistrationUniversityViewController.swift */; };
 		DE31A72E20CB877F00A83DA1 /* publicidad.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DE31A72D20CB877F00A83DA1 /* publicidad.mp4 */; };
+		DE31A73C20CEE29B00A83DA1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A73B20CEE29B00A83DA1 /* HomeViewController.swift */; };
+		DE31A73E20CEE3AF00A83DA1 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A73D20CEE3AF00A83DA1 /* MenuBar.swift */; };
+		DE31A74020D0670900A83DA1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A73F20D0670900A83DA1 /* HomeView.swift */; };
+		DE31A74220D0686D00A83DA1 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A74120D0686D00A83DA1 /* LibraryView.swift */; };
+		DE31A74420D0689D00A83DA1 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A74320D0689D00A83DA1 /* RecordView.swift */; };
+		DE31A74620D068C800A83DA1 /* DChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A74520D068C800A83DA1 /* DChatView.swift */; };
+		DE31A74820D0690F00A83DA1 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A74720D0690F00A83DA1 /* MenuView.swift */; };
 		DEAF45E520C9BBAB004BFC5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF45E420C9BBAB004BFC5D /* AppDelegate.swift */; };
 		DEAF45E720C9BBAB004BFC5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF45E620C9BBAB004BFC5D /* ViewController.swift */; };
 		DEAF45ED20C9BBAB004BFC5D /* Digital_Class.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEAF45EB20C9BBAB004BFC5D /* Digital_Class.xcdatamodeld */; };
@@ -46,6 +53,13 @@
 		DE31A72920CA1C9E00A83DA1 /* RegistrationProfessorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationProfessorViewController.swift; sourceTree = "<group>"; };
 		DE31A72B20CA1CE900A83DA1 /* RegistrationUniversityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUniversityViewController.swift; sourceTree = "<group>"; };
 		DE31A72D20CB877F00A83DA1 /* publicidad.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = publicidad.mp4; sourceTree = "<group>"; };
+		DE31A73B20CEE29B00A83DA1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DE31A73D20CEE3AF00A83DA1 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		DE31A73F20D0670900A83DA1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DE31A74120D0686D00A83DA1 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		DE31A74320D0689D00A83DA1 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		DE31A74520D068C800A83DA1 /* DChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DChatView.swift; sourceTree = "<group>"; };
+		DE31A74720D0690F00A83DA1 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		DEAF45E120C9BBAB004BFC5D /* Digital Class.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Digital Class.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAF45E420C9BBAB004BFC5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEAF45E620C9BBAB004BFC5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +135,13 @@
 				DEAF45F020C9BBAC004BFC5D /* LaunchScreen.storyboard */,
 				DEAF45F320C9BBAC004BFC5D /* Info.plist */,
 				DEAF45EB20C9BBAB004BFC5D /* Digital_Class.xcdatamodeld */,
+				DE31A73B20CEE29B00A83DA1 /* HomeViewController.swift */,
+				DE31A73D20CEE3AF00A83DA1 /* MenuBar.swift */,
+				DE31A73F20D0670900A83DA1 /* HomeView.swift */,
+				DE31A74120D0686D00A83DA1 /* LibraryView.swift */,
+				DE31A74320D0689D00A83DA1 /* RecordView.swift */,
+				DE31A74520D068C800A83DA1 /* DChatView.swift */,
+				DE31A74720D0690F00A83DA1 /* MenuView.swift */,
 			);
 			path = "Digital Class";
 			sourceTree = "<group>";
@@ -278,8 +299,15 @@
 				DE31A72C20CA1CE900A83DA1 /* RegistrationUniversityViewController.swift in Sources */,
 				DEAF45E720C9BBAB004BFC5D /* ViewController.swift in Sources */,
 				DE31A72620C9F40400A83DA1 /* AcountTypesViewController.swift in Sources */,
+				DE31A74220D0686D00A83DA1 /* LibraryView.swift in Sources */,
+				DE31A73E20CEE3AF00A83DA1 /* MenuBar.swift in Sources */,
+				DE31A74020D0670900A83DA1 /* HomeView.swift in Sources */,
+				DE31A74420D0689D00A83DA1 /* RecordView.swift in Sources */,
 				DE31A72820CA1C8700A83DA1 /* RegistrationStudentViewController.swift in Sources */,
+				DE31A73C20CEE29B00A83DA1 /* HomeViewController.swift in Sources */,
+				DE31A74820D0690F00A83DA1 /* MenuView.swift in Sources */,
 				DE31A72420C9D4DC00A83DA1 /* Utilities.swift in Sources */,
+				DE31A74620D068C800A83DA1 /* DChatView.swift in Sources */,
 				DEAF45E520C9BBAB004BFC5D /* AppDelegate.swift in Sources */,
 				DE31A72A20CA1C9E00A83DA1 /* RegistrationProfessorViewController.swift in Sources */,
 			);

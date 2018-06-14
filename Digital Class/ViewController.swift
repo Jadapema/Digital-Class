@@ -172,6 +172,10 @@ class ViewController: UIViewController {
 
     @objc func logInHandler () {
         print("Log In")
+        let modalStyle = UIModalTransitionStyle.crossDissolve
+        let vc = HomeViewController()
+        vc.modalTransitionStyle = modalStyle
+        self.present(vc, animated: true, completion: nil)
     }
     
     @objc func facebookHandler () {

@@ -61,4 +61,6 @@ class Utilities: NSObject {
         let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
         return pred.evaluate(with: email)
     }
+    
+
 }

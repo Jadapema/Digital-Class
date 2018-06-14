@@ -9,6 +9,8 @@
 import UIKit
 import AVKit
 import AVFoundation
+import MapKit
+
 
 class RegistrationUniversityViewController: UIViewController {
 
@@ -111,7 +113,7 @@ class RegistrationUniversityViewController: UIViewController {
         return textField
     }()
     
-    // names textfield
+    // email textfield
     var emailTxtF : UITextField = {
         let textField = UITextField()
         textField.backgroundColor = Utilities().darkBlueColor
@@ -127,7 +129,7 @@ class RegistrationUniversityViewController: UIViewController {
         textField.layer.cornerRadius = 30
         textField.clipsToBounds = true
         textField.keyboardAppearance = .dark
-        textField.keyboardType = .asciiCapable
+        textField.keyboardType = .emailAddress
         textField.returnKeyType = .done
         return textField
     }()
@@ -164,13 +166,20 @@ class RegistrationUniversityViewController: UIViewController {
     }()
     
     // Map View
-    var mapV : UIView = {
-        var view = UIView()
+    private var locationManager: CLLocationManager!
+    private var currentLocation: MKPointAnnotation?
+    private var universityLocation : CLLocationCoordinate2D?
+    var enter = true
+    var mapV : MKMapView = {
+        var view = MKMapView()
         view.layer.borderWidth = 1
         view.layer.borderColor = #colorLiteral(red: 0.5921568627, green: 0.5921568627, blue: 0.5921568627, alpha: 1)
         view.layer.masksToBounds = false
-        view.layer.cornerRadius = 30
+        view.layer.cornerRadius = 10
         view.clipsToBounds = true
+        view.mapType = .standard
+        view.isZoomEnabled = true
+        view.isScrollEnabled = true
         return view
     }()
 
@@ -199,44 +208,25 @@ class RegistrationUniversityViewController: UIViewController {
         return label
     }()
     
+    var player: AVPlayer!
+    var avpController = AVPlayerViewController()
+    
+    
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         self.view.backgroundColor = utilities.darkBlueColor
     }
-    
-    
-    var player: AVPlayer!
-    var avpController = AVPlayerViewController()
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
 
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         self.view.addSubview(scrollView)
         scrollView.addSubview(logoIV)
         scrollView.addSubview(welcomeLbl)
         scrollView.addSubview(videoV)
-        
-//        let moviePath = Bundle.main.path(forResource: "Hello Moto", ofType: "mp4")
-//        if let path = moviePath {
-//            let url = NSURL.fileURL(withPath: path)
-//            self.player = AVPlayer(url: url)
-//            self.avpController = AVPlayerViewController()
-//            self.avpController.player = self.player
-//            avpController.view.frame = videoV.frame
-//            self.addChildViewController(avpController)
-//            self.view.addSubview(avpController.view)
-//        }
-        
         videoV.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(playVideo)))
         videoV.isUserInteractionEnabled = true
-        
         scrollView.addSubview(messageLbl)
         scrollView.addSubview(nameTxtF)
         nameTxtF.delegate = self
@@ -249,6 +239,17 @@ class RegistrationUniversityViewController: UIViewController {
         phoneTxtF.addDoneButtonToKeyboard(myAction:  #selector(self.phoneTxtF.resignFirstResponder))
         scrollView.addSubview(mapLbl)
         scrollView.addSubview(mapV)
+        // map
+        locationManager = CLLocationManager()
+        self.locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+        mapV.delegate = self
+        addLongPressGesture()
+        //
         scrollView.addSubview(sendLbl)
         sendLbl.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(sendHandler)))
         sendLbl.isUserInteractionEnabled = true
@@ -354,10 +355,6 @@ class RegistrationUniversityViewController: UIViewController {
 
     }
     
-    func stop() {
-        
-    }
-    
     @objc func sendHandler () {
         guard self.nameTxtF.text != nil && self.nameTxtF.text != "" else {
             nameTxtF.layer.borderColor = #colorLiteral(red: 0.5882352941, green: 0.1568627451, blue: 0.1058823529, alpha: 1)
@@ -373,6 +370,7 @@ class RegistrationUniversityViewController: UIViewController {
         guard self.emailTxtF.text != nil && self.emailTxtF.text != "" else {
             emailTxtF.layer.borderColor = #colorLiteral(red: 0.5882352941, green: 0.1568627451, blue: 0.1058823529, alpha: 1)
             sloganTxtF.layer.borderColor = #colorLiteral(red: 0.5921568627, green: 0.5921568627, blue: 0.5921568627, alpha: 1)
+            nameTxtF.layer.borderColor = #colorLiteral(red: 0.5921568627, green: 0.5921568627, blue: 0.5921568627, alpha: 1)
             utilities.littleDownMovement(view: emailTxtF)
             return
         }
@@ -388,10 +386,18 @@ class RegistrationUniversityViewController: UIViewController {
                                                                       attributes: [NSAttributedStringKey.foregroundColor: Utilities().whiteColor, NSAttributedStringKey.font : UIFont(name: "AvenirNext-UltraLight", size: 20) as Any])
             phoneTxtF.layer.borderColor = #colorLiteral(red: 0.5882352941, green: 0.1568627451, blue: 0.1058823529, alpha: 1)
             emailTxtF.layer.borderColor = #colorLiteral(red: 0.5921568627, green: 0.5921568627, blue: 0.5921568627, alpha: 1)
+            sloganTxtF.layer.borderColor = #colorLiteral(red: 0.5921568627, green: 0.5921568627, blue: 0.5921568627, alpha: 1)
+            nameTxtF.layer.borderColor = #colorLiteral(red: 0.5921568627, green: 0.5921568627, blue: 0.5921568627, alpha: 1)
             utilities.littleDownMovement(view: phoneTxtF)
             return
         }
+        guard self.universityLocation != nil else {
+            mapLbl.textColor = #colorLiteral(red: 0.5882352941, green: 0.1568627451, blue: 0.1058823529, alpha: 1)
+            utilities.littleDownMovement(view: mapLbl)
+            return
+        }
         print("send")
+        print("University Name: \(nameTxtF.text!), slogan: \(sloganTxtF.text!), email: \(emailTxtF.text!), phone: \(phoneTxtF.text!), latitud: \((universityLocation?.latitude)!), longitud: \((universityLocation?.longitude)!)")
         let modalStyle = UIModalTransitionStyle.crossDissolve
         let vc = ViewController()
         vc.modalTransitionStyle = modalStyle
@@ -405,7 +411,58 @@ class RegistrationUniversityViewController: UIViewController {
         vc.modalTransitionStyle = modalStyle
         self.present(vc, animated: true, completion: nil)
     }
+    // map
     
+    func addLongPressGesture(){
+        let longPressRecogniser:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target:self , action:#selector(RegistrationUniversityViewController.handleLongPress(_:)))
+        longPressRecogniser.minimumPressDuration = 1.0 //user needs to press for 2 seconds
+        self.mapV.addGestureRecognizer(longPressRecogniser)
+    }
+    
+    @objc func handleLongPress(_ gestureRecognizer:UIGestureRecognizer){
+        if gestureRecognizer.state != .began{
+            return
+        }
+        
+        guard self.nameTxtF.text != nil && self.nameTxtF.text != "" else {
+            nameTxtF.layer.borderColor = #colorLiteral(red: 0.5882352941, green: 0.1568627451, blue: 0.1058823529, alpha: 1)
+            utilities.littleDownMovement(view: nameTxtF)
+            return
+        }
+        
+        let touchPoint:CGPoint = gestureRecognizer.location(in: self.mapV)
+        let touchMapCoordinate:CLLocationCoordinate2D =
+            self.mapV.convert(touchPoint, toCoordinateFrom: self.mapV)
+        
+        let annot:MKPointAnnotation = MKPointAnnotation()
+        annot.coordinate = touchMapCoordinate
+        annot.title = "\(nameTxtF.text!)"
+        
+        universityLocation = touchMapCoordinate
+        
+        self.resetTracking()
+        self.mapV.removeAnnotations(mapV.annotations)
+        self.mapV.addAnnotation(annot)
+        self.mapV.addAnnotation(currentLocation!)
+        self.centerMap(touchMapCoordinate)
+    }
+    
+    func resetTracking(){
+        if (mapV.showsUserLocation){
+            mapV.showsUserLocation = false
+            self.mapV.removeAnnotations(mapV.annotations)
+            self.locationManager.stopUpdatingLocation()
+        }
+    }
+    
+    func centerMap(_ center:CLLocationCoordinate2D){
+        let spanX = 0.007
+        let spanY = 0.007
+        
+        let newRegion = MKCoordinateRegion(center:center , span: MKCoordinateSpanMake(spanX, spanY))
+        mapV.setRegion(newRegion, animated: true)
+    }
+    //
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
         nameTxtF.resignFirstResponder()
@@ -424,5 +481,38 @@ extension RegistrationUniversityViewController : UITextFieldDelegate {
         emailTxtF.resignFirstResponder()
         phoneTxtF.resignFirstResponder()
         return true
+    }
+}
+
+extension RegistrationUniversityViewController : CLLocationManagerDelegate, MKMapViewDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if enter {
+            enter = false
+            centerMap((manager.location?.coordinate)!)
+            let annot:MKPointAnnotation = MKPointAnnotation()
+            annot.coordinate = (manager.location?.coordinate)!
+            annot.title = "You!"
+            currentLocation = annot
+            mapV.addAnnotation(currentLocation!)
+            print("hello")
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
+        let identifier = "pin"
+        var view : MKPinAnnotationView
+        if let dequeueView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView{
+            print("with")
+            dequeueView.annotation = annotation
+            view = dequeueView
+        }else{
+            print("without")
+            view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.canShowCallout = true
+            view.calloutOffset = CGPoint(x: -5, y: 5)
+            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        }
+        view.pinTintColor =  utilities.lightBlueColor
+        return view
     }
 }
