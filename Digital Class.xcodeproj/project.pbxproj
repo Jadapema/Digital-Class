@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13AA55EC979C1778A5F0B85A /* Pods_Digital_Class.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9134F4A224F1920E36DD5DD6 /* Pods_Digital_Class.framework */; };
+		DE049B2420DDC43300737CA5 /* ClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE049B2320DDC43300737CA5 /* ClassView.swift */; };
 		DE31A72420C9D4DC00A83DA1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A72320C9D4DC00A83DA1 /* Utilities.swift */; };
 		DE31A72620C9F40400A83DA1 /* AcountTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A72520C9F40400A83DA1 /* AcountTypesViewController.swift */; };
 		DE31A72820CA1C8700A83DA1 /* RegistrationStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A72720CA1C8700A83DA1 /* RegistrationStudentViewController.swift */; };
@@ -20,6 +22,11 @@
 		DE31A74420D0689D00A83DA1 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A74320D0689D00A83DA1 /* RecordView.swift */; };
 		DE31A74620D068C800A83DA1 /* DChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A74520D068C800A83DA1 /* DChatView.swift */; };
 		DE31A74820D0690F00A83DA1 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A74720D0690F00A83DA1 /* MenuView.swift */; };
+		DE31A74A20D2D53300A83DA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE31A74920D2D53300A83DA1 /* GoogleService-Info.plist */; };
+		DE31A74F20D30C6900A83DA1 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A74E20D30C6900A83DA1 /* Book.swift */; };
+		DE31A75120D5A81C00A83DA1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A75020D5A81C00A83DA1 /* User.swift */; };
+		DE31A75320D5F14900A83DA1 /* chatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A75220D5F14900A83DA1 /* chatView.swift */; };
+		DE31A75520D6275D00A83DA1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE31A75420D6275D00A83DA1 /* Message.swift */; };
 		DEAF45E520C9BBAB004BFC5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF45E420C9BBAB004BFC5D /* AppDelegate.swift */; };
 		DEAF45E720C9BBAB004BFC5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF45E620C9BBAB004BFC5D /* ViewController.swift */; };
 		DEAF45ED20C9BBAB004BFC5D /* Digital_Class.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEAF45EB20C9BBAB004BFC5D /* Digital_Class.xcdatamodeld */; };
@@ -27,6 +34,8 @@
 		DEAF45F220C9BBAC004BFC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAF45F020C9BBAC004BFC5D /* LaunchScreen.storyboard */; };
 		DEAF45FD20C9BBAC004BFC5D /* Digital_ClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF45FC20C9BBAC004BFC5D /* Digital_ClassTests.swift */; };
 		DEAF460820C9BBAD004BFC5D /* Digital_ClassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF460720C9BBAD004BFC5D /* Digital_ClassUITests.swift */; };
+		DEFF4E6520DB646D00634B41 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF4E6420DB646D00634B41 /* ShareView.swift */; };
+		DEFF4E6720DC535D00634B41 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF4E6620DC535D00634B41 /* CommentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +56,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DCCA9B28A95CAB70A1A08BE /* Pods-Digital Class.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digital Class.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Digital Class/Pods-Digital Class.debug.xcconfig"; sourceTree = "<group>"; };
+		9134F4A224F1920E36DD5DD6 /* Pods_Digital_Class.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digital_Class.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D002EC6AAAF849D4D5B8DA8D /* Pods-Digital Class.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digital Class.release.xcconfig"; path = "Pods/Target Support Files/Pods-Digital Class/Pods-Digital Class.release.xcconfig"; sourceTree = "<group>"; };
+		DE049B2320DDC43300737CA5 /* ClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassView.swift; sourceTree = "<group>"; };
 		DE31A72320C9D4DC00A83DA1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		DE31A72520C9F40400A83DA1 /* AcountTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcountTypesViewController.swift; sourceTree = "<group>"; };
 		DE31A72720CA1C8700A83DA1 /* RegistrationStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationStudentViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +73,11 @@
 		DE31A74320D0689D00A83DA1 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		DE31A74520D068C800A83DA1 /* DChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DChatView.swift; sourceTree = "<group>"; };
 		DE31A74720D0690F00A83DA1 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		DE31A74920D2D53300A83DA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DE31A74E20D30C6900A83DA1 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		DE31A75020D5A81C00A83DA1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DE31A75220D5F14900A83DA1 /* chatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatView.swift; sourceTree = "<group>"; };
+		DE31A75420D6275D00A83DA1 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		DEAF45E120C9BBAB004BFC5D /* Digital Class.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Digital Class.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAF45E420C9BBAB004BFC5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEAF45E620C9BBAB004BFC5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +91,8 @@
 		DEAF460320C9BBAD004BFC5D /* Digital ClassUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Digital ClassUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAF460720C9BBAD004BFC5D /* Digital_ClassUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digital_ClassUITests.swift; sourceTree = "<group>"; };
 		DEAF460920C9BBAD004BFC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEFF4E6420DB646D00634B41 /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
+		DEFF4E6620DC535D00634B41 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13AA55EC979C1778A5F0B85A /* Pods_Digital_Class.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +121,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6277EBD4227B4364BB67EF87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9134F4A224F1920E36DD5DD6 /* Pods_Digital_Class.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8277BF4F792DD64CE06E248 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0DCCA9B28A95CAB70A1A08BE /* Pods-Digital Class.debug.xcconfig */,
+				D002EC6AAAF849D4D5B8DA8D /* Pods-Digital Class.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DE31A74B20D30C1A00A83DA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE31A73D20CEE3AF00A83DA1 /* MenuBar.swift */,
+				DE31A73F20D0670900A83DA1 /* HomeView.swift */,
+				DE31A74120D0686D00A83DA1 /* LibraryView.swift */,
+				DE31A74320D0689D00A83DA1 /* RecordView.swift */,
+				DE31A74520D068C800A83DA1 /* DChatView.swift */,
+				DE31A75220D5F14900A83DA1 /* chatView.swift */,
+				DE31A74720D0690F00A83DA1 /* MenuView.swift */,
+				DEFF4E6420DB646D00634B41 /* ShareView.swift */,
+				DEFF4E6620DC535D00634B41 /* CommentView.swift */,
+				DE049B2320DDC43300737CA5 /* ClassView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE31A74C20D30C3000A83DA1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DEAF45E620C9BBAB004BFC5D /* ViewController.swift */,
+				DE31A72520C9F40400A83DA1 /* AcountTypesViewController.swift */,
+				DE31A72720CA1C8700A83DA1 /* RegistrationStudentViewController.swift */,
+				DE31A72920CA1C9E00A83DA1 /* RegistrationProfessorViewController.swift */,
+				DE31A72B20CA1CE900A83DA1 /* RegistrationUniversityViewController.swift */,
+				DE31A73B20CEE29B00A83DA1 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DE31A74D20D30C4700A83DA1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE31A74E20D30C6900A83DA1 /* Book.swift */,
+				DE31A75020D5A81C00A83DA1 /* User.swift */,
+				DE31A75420D6275D00A83DA1 /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		DEAF45D820C9BBAA004BFC5D = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +186,8 @@
 				DEAF45FB20C9BBAC004BFC5D /* Digital ClassTests */,
 				DEAF460620C9BBAD004BFC5D /* Digital ClassUITests */,
 				DEAF45E220C9BBAB004BFC5D /* Products */,
+				A8277BF4F792DD64CE06E248 /* Pods */,
+				6277EBD4227B4364BB67EF87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,23 +205,15 @@
 			isa = PBXGroup;
 			children = (
 				DEAF45E420C9BBAB004BFC5D /* AppDelegate.swift */,
-				DEAF45E620C9BBAB004BFC5D /* ViewController.swift */,
-				DE31A72520C9F40400A83DA1 /* AcountTypesViewController.swift */,
-				DE31A72720CA1C8700A83DA1 /* RegistrationStudentViewController.swift */,
-				DE31A72920CA1C9E00A83DA1 /* RegistrationProfessorViewController.swift */,
-				DE31A72B20CA1CE900A83DA1 /* RegistrationUniversityViewController.swift */,
+				DE31A74B20D30C1A00A83DA1 /* Views */,
+				DE31A74C20D30C3000A83DA1 /* Controllers */,
+				DE31A74D20D30C4700A83DA1 /* Models */,
 				DE31A72320C9D4DC00A83DA1 /* Utilities.swift */,
 				DEAF45EE20C9BBAC004BFC5D /* Assets.xcassets */,
 				DEAF45F020C9BBAC004BFC5D /* LaunchScreen.storyboard */,
 				DEAF45F320C9BBAC004BFC5D /* Info.plist */,
 				DEAF45EB20C9BBAB004BFC5D /* Digital_Class.xcdatamodeld */,
-				DE31A73B20CEE29B00A83DA1 /* HomeViewController.swift */,
-				DE31A73D20CEE3AF00A83DA1 /* MenuBar.swift */,
-				DE31A73F20D0670900A83DA1 /* HomeView.swift */,
-				DE31A74120D0686D00A83DA1 /* LibraryView.swift */,
-				DE31A74320D0689D00A83DA1 /* RecordView.swift */,
-				DE31A74520D068C800A83DA1 /* DChatView.swift */,
-				DE31A74720D0690F00A83DA1 /* MenuView.swift */,
+				DE31A74920D2D53300A83DA1 /* GoogleService-Info.plist */,
 			);
 			path = "Digital Class";
 			sourceTree = "<group>";
@@ -171,9 +243,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEAF460C20C9BBAD004BFC5D /* Build configuration list for PBXNativeTarget "Digital Class" */;
 			buildPhases = (
+				98B011F9284519EAFAC91311 /* [CP] Check Pods Manifest.lock */,
 				DEAF45DD20C9BBAB004BFC5D /* Sources */,
 				DEAF45DE20C9BBAB004BFC5D /* Frameworks */,
 				DEAF45DF20C9BBAB004BFC5D /* Resources */,
+				A0578B9FA0A23BE07790C0DF /* [CP] Embed Pods Frameworks */,
+				68E251AEA9BD41D0C3F0AF92 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -269,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE31A72E20CB877F00A83DA1 /* publicidad.mp4 in Resources */,
+				DE31A74A20D2D53300A83DA1 /* GoogleService-Info.plist in Resources */,
 				DEAF45F220C9BBAC004BFC5D /* LaunchScreen.storyboard in Resources */,
 				DEAF45EF20C9BBAC004BFC5D /* Assets.xcassets in Resources */,
 			);
@@ -290,26 +366,93 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		68E251AEA9BD41D0C3F0AF92 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Digital Class/Pods-Digital Class-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98B011F9284519EAFAC91311 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Digital Class-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0578B9FA0A23BE07790C0DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Digital Class/Pods-Digital Class-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Digital Class/Pods-Digital Class-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DEAF45DD20C9BBAB004BFC5D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEFF4E6520DB646D00634B41 /* ShareView.swift in Sources */,
+				DE31A74F20D30C6900A83DA1 /* Book.swift in Sources */,
 				DEAF45ED20C9BBAB004BFC5D /* Digital_Class.xcdatamodeld in Sources */,
 				DE31A72C20CA1CE900A83DA1 /* RegistrationUniversityViewController.swift in Sources */,
 				DEAF45E720C9BBAB004BFC5D /* ViewController.swift in Sources */,
 				DE31A72620C9F40400A83DA1 /* AcountTypesViewController.swift in Sources */,
 				DE31A74220D0686D00A83DA1 /* LibraryView.swift in Sources */,
 				DE31A73E20CEE3AF00A83DA1 /* MenuBar.swift in Sources */,
+				DE31A75520D6275D00A83DA1 /* Message.swift in Sources */,
+				DE31A75120D5A81C00A83DA1 /* User.swift in Sources */,
 				DE31A74020D0670900A83DA1 /* HomeView.swift in Sources */,
 				DE31A74420D0689D00A83DA1 /* RecordView.swift in Sources */,
+				DEFF4E6720DC535D00634B41 /* CommentView.swift in Sources */,
 				DE31A72820CA1C8700A83DA1 /* RegistrationStudentViewController.swift in Sources */,
 				DE31A73C20CEE29B00A83DA1 /* HomeViewController.swift in Sources */,
+				DE31A75320D5F14900A83DA1 /* chatView.swift in Sources */,
 				DE31A74820D0690F00A83DA1 /* MenuView.swift in Sources */,
 				DE31A72420C9D4DC00A83DA1 /* Utilities.swift in Sources */,
 				DE31A74620D068C800A83DA1 /* DChatView.swift in Sources */,
 				DEAF45E520C9BBAB004BFC5D /* AppDelegate.swift in Sources */,
 				DE31A72A20CA1C9E00A83DA1 /* RegistrationProfessorViewController.swift in Sources */,
+				DE049B2420DDC43300737CA5 /* ClassView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +614,7 @@
 		};
 		DEAF460D20C9BBAD004BFC5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DCCA9B28A95CAB70A1A08BE /* Pods-Digital Class.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -489,6 +633,7 @@
 		};
 		DEAF460E20C9BBAD004BFC5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D002EC6AAAF849D4D5B8DA8D /* Pods-Digital Class.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

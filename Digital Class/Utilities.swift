@@ -15,6 +15,9 @@
 
 
 import UIKit
+import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
 
 class Utilities: NSObject {
     
@@ -24,6 +27,7 @@ class Utilities: NSObject {
     let whiteColor = #colorLiteral(red: 0.9411764706, green: 0.9137254902, blue: 0.8784313725, alpha: 1)
     let redColor = #colorLiteral(red: 0.5882352941, green: 0.1568627451, blue: 0.1058823529, alpha: 1)
     let grayColor = #colorLiteral(red: 0.5921568627, green: 0.5921568627, blue: 0.5921568627, alpha: 1)
+    let greenColor = #colorLiteral(red: 0.137254902, green: 0.6352941176, blue: 0.3019607843, alpha: 1)
     
     //Return a random Alphanumeric Number With a length
     public func randomAlphaNumericString(length: Int) -> String {
@@ -63,4 +67,83 @@ class Utilities: NSObject {
     }
     
 
+}
+
+class FirebaseController {
+    
+    var UtilitiesRef = Utilities()
+    
+    // Main Reference to Firebase Database
+    var mainDbRef : DatabaseReference {
+        return Database.database().reference()
+    }
+    // Main reference to Firebase Storage
+    var mainStRef : StorageReference {
+        return Storage.storage().reference(forURL: "gs://classroom-19991.appspot.com/")
+    }
+    
+    // Login with a Email, Password and a CompletionHandler
+    public func Login (email : String, password : String, completion : @escaping () -> Void)  {
+        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+            //Check if the User Exist
+            if user != nil {
+                // Login Successfully
+                completion()
+                
+            } else {
+                if let myError = error?.localizedDescription {
+                    print(myError)
+                } else {
+                    print("Error in Auth Section")
+                }
+            }
+        })
+    }
+    
+    // Register a user in Firebase Auth and save the data in the database
+    public func Signin (name: String, email : String, password: String, profileImg : UIImage, completion : @escaping () -> Void) {
+        Auth.auth().createUser(withEmail: email, password: password , completion: { (user, error) in
+            //Check if the user exist
+            if user != nil {
+                //User created Sucessfully
+                print("User Created Sucessfully")
+                //Reference to Profile
+                let profileRef = self.mainDbRef.child("Users").child((user?.uid)!).child("Profile")
+                //Add Name and Email here, then the profileImage is uploaded
+                profileRef.child("Name").setValue("\(name)")
+                profileRef.child("Email").setValue("\(email)")
+                // Reference to random image url Storage
+                let imgStRef = self.mainStRef.child("Users_Profile_Image").child("\(self.UtilitiesRef.randomAlphaNumericString(length: 10)).jpg")
+                //We create a PNG Representation of the image to upload
+                if let UploadData = UIImageJPEGRepresentation(profileImg, 0.1) {
+                    //Upload the image to the storage
+                    imgStRef.putData(UploadData, metadata: nil, completion: { (Metadata, error) in
+                        // Check for any error
+                        if error != nil {
+                            print(error!)
+                        } else {
+                            //Image Uploaded
+                            //Get the download url of the image uploaded
+                            if let ImageUploadedUrl = Metadata?.downloadURL()?.absoluteString {
+                                //once the image is uploaded we upload the data again but with the imageUrl
+                                profileRef.child("Name").setValue("\(name)")
+                                profileRef.child("Email").setValue("\(email)")
+                                profileRef.child("ProfileImageUrl").setValue("\(ImageUploadedUrl)")
+                            }
+                        }
+                    })
+                }
+                completion()
+            } else {
+                if let myError = error?.localizedDescription {
+                    print(myError)
+                } else {
+                    print("Error")
+                }
+            }
+        })
+    }
+    
+    
+    
 }

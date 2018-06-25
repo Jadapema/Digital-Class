@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure() 
         window = UIWindow(frame: UIScreen.main.bounds)
-        let HomeVC = ViewController()
+        let HomeVC = HomeViewController()
         window!.rootViewController = HomeVC
         window!.makeKeyAndVisible()
         return true
